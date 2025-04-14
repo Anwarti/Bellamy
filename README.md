@@ -55,10 +55,8 @@ pip install google-generativeai
 1. Maak een `.env` bestand aan in de hoofdmap van het project en voeg je Google API-sleutel toe:
 
 ```bash
-GOOGLE_API_KEY=AIzaSyCRA4gI4_0fJs0gWlyqHtqPlZy4JramDzE
+GOOGLE_API_KEY=XXXXX
 ```
-
-Note: deze key is expired :-)
 
 1. Start de applicatie:
 
@@ -128,13 +126,13 @@ Als je een foutmelding krijgt zoals "API key not valid", controleer dan het volg
    Voor Windows:
 
    ```powershell
-   set GOOGLE_API_KEY=AIzaSyCRA4gI4_0fJs0gWlyqHtqPlZy4JramDzE
+   set GOOGLE_API_KEY=XXXXX
    ```
 
    Voor macOS/Linux:
 
    ```bash
-   export GOOGLE_API_KEY=AIzaSyCRA4gI4_0fJs0gWlyqHtqPlZy4JramDzE
+   export GOOGLE_API_KEY=XXXXX
    ```
 
    - Start vervolgens de applicatie vanuit dezelfde terminal-sessie
