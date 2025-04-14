@@ -16,6 +16,7 @@ Deze applicatie stelt gebruikers in staat om PDF-documenten te uploaden en er ve
 ## Technische details
 
 De applicatie maakt gebruik van:
+
 - **Streamlit**: Voor de gebruikersinterface
 - **LangChain**: Voor het koppelen van verschillende AI-componenten
 - **Google Gemini AI**: Als taalmodel voor het genereren van antwoorden
@@ -32,28 +33,35 @@ De applicatie maakt gebruik van:
 ### Stappen
 
 1. Clone deze repository naar je lokale machine:
+
 ```bash
 git clone https://github.com/TikkaMasala1/CCC_Bellamy.git
 cd https://github.com/TikkaMasala1/CCC_Bellamy.git
 ```
 
-2. Installeer de benodigde packages:
+1. Installeer de benodigde packages:
+
 ```bash
 pip install streamlit langchain langchain-google-genai faiss-cpu pypdf2 python-dotenv
+pip install google-generativeai
 ```
 
-3. Verkrijg een Google API-sleutel voor Gemini:
+1. Verkrijg een Google API-sleutel voor Gemini:
    - Ga naar [Google AI Studio](https://makersuite.google.com/app/apikey)
    - Log in met je Google-account
    - Klik op "Create API Key" en volg de instructies
    - Kopieer de gegenereerde API-sleutel
 
-4. Maak een `.env` bestand aan in de hoofdmap van het project en voeg je Google API-sleutel toe:
-```
+1. Maak een `.env` bestand aan in de hoofdmap van het project en voeg je Google API-sleutel toe:
+
+```bash
 GOOGLE_API_KEY=AIzaSyCRA4gI4_0fJs0gWlyqHtqPlZy4JramDzE
 ```
 
-5. Start de applicatie:
+Note: deze key is expired :-)
+
+1. Start de applicatie:
+
 ```bash
 streamlit run app.py
 ```
@@ -116,19 +124,20 @@ Als je een foutmelding krijgt zoals "API key not valid", controleer dan het volg
 
 4. **Stel de API-sleutel in via de terminal**:
    - Als het probleem aanhoudt, probeer de API-sleutel direct in de terminal in te stellen:
-   
+
    Voor Windows:
-   ```
+
+   ```powershell
    set GOOGLE_API_KEY=AIzaSyCRA4gI4_0fJs0gWlyqHtqPlZy4JramDzE
    ```
-   
+
    Voor macOS/Linux:
-   ```
+
+   ```bash
    export GOOGLE_API_KEY=AIzaSyCRA4gI4_0fJs0gWlyqHtqPlZy4JramDzE
    ```
-   
+
    - Start vervolgens de applicatie vanuit dezelfde terminal-sessie
 
 5. **Herstart de applicatie**:
    - Nadat je wijzigingen hebt aangebracht in het `.env` bestand of de omgevingsvariabele hebt ingesteld, start de applicatie opnieuw
-
