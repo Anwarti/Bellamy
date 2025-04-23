@@ -22,12 +22,12 @@ from langchain_core.prompts import PromptTemplate
 
 load_dotenv()
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 
 if not GOOGLE_API_KEY:
     raise RuntimeError("GOOGLE_API_KEY omgevingsvariabele ontbreekt!")
-if not DISCORD_BOT_TOKEN:
-    raise RuntimeError("DISCORD_BOT_TOKEN omgevingsvariabele ontbreekt!")
+if not DISCORD_TOKEN:
+    raise RuntimeError("DISCORD_TOKEN omgevingsvariabele ontbreekt!")
 
 # Configure Google GenAI
 import google.generativeai as genai  # noqa: E402
@@ -200,4 +200,4 @@ async def reset(ctx: commands.Context):
 
 
 if __name__ == "__main__":
-    bot.run(DISCORD_BOT_TOKEN)
+    bot.run(DISCORD_TOKEN)
