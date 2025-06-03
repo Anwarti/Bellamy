@@ -4,8 +4,8 @@ import json
 import time
 
 # Configuratie
-API_KEY = "dataset-7FKlce0q2QrAIrf0GmcQ24Gh"
-DATASET_ID = "cdf400c7-e896-4c8c-bf67-d83fde99d15e"
+API_KEY = "dataset-**********************"
+DATASET_ID = "**************************"
 PDF_FOLDER = r"C:\Users\titia\Downloads\chapters-20250401T220920Z-001\chapters"
 
 # API setup
