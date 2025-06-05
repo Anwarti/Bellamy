@@ -2,11 +2,21 @@ import os
 import requests
 import json
 import time
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Configuratie
-API_KEY = "dataset-**********************"
-DATASET_ID = "**************************"
-PDF_FOLDER = r"C:\Users\titia\Downloads\chapters-20250401T220920Z-001\chapters"
+API_KEY = os.getenv("DIFY_API_KEY")
+DATASET_ID = os.getenv("DIFY_DATASET_ID")
+PDF_FOLDER = os.getenv("PDF_FOLDER")
+
+# Error handling for missing environment variables
+if API_KEY is None or DATASET_ID is None or PDF_FOLDER is None:
+    print("❌ Error: DIFY_API_KEY, DIFY_DATASET_ID, or PDF_FOLDER not found in .env file.")
+    print("Please create a .env file with these variables.")
+    exit()
 
 # API setup
 url = f"https://api.dify.ai/v1/datasets/{DATASET_ID}/document/create_by_file"

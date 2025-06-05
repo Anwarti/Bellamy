@@ -52,11 +52,18 @@ pip install google-generativeai
    - Klik op "Create API Key" en volg de instructies
    - Kopieer de gegenereerde API-sleutel
 
-1. Maak een `.env` bestand aan in de hoofdmap van het project en voeg je Google API-sleutel toe:
-
-```bash
-GOOGLE_API_KEY=XXXXX
-```
+4. Configureer je environment variabelen:
+   - Kopieer het `sample.env` bestand naar een nieuw bestand genaamd `.env`:
+     ```bash
+     cp sample.env .env
+     ```
+   - Open het `.env` bestand en vul de vereiste waarden in voor de volgende variabelen:
+     - `GOOGLE_API_KEY`: Je Google API sleutel voor Gemini.
+     - `DIFY_API_KEY`: Je Dify API sleutel.
+     - `DIFY_DATASET_ID`: Je Dify Dataset ID.
+     - `DISCORD_TOKEN`: Je Discord Bot Token.
+     - `DIFY_API_URL`: De API URL voor je Dify instantie (indien anders dan de standaard).
+     - `PDF_FOLDER`: Het pad naar de map waar je PDF-bestanden zich bevinden.
 
 1. Start de applicatie:
 
